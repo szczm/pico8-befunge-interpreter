@@ -90,7 +90,7 @@ To reload code, restart the cart. There is no LOAD button, since there are only 
 - The P key opens up the main menu, which can be sometimes annoying, but is not otherwise a problem
 - The grid is smaller than usual Befunge (it's size is 32 columns and 8 rows)
 - There is currently no support for big numbers, numbers inside the interpreter are normal PICO-8 numbers (so usual things like integer overflow can happen)
--- Small ASCII character codes assumed for letters, since PICO-8 only supports one case.
+- Small ASCII character codes assumed for letters, since PICO-8 only supports one case.
 
 ## Bug reports
 If you encounter any bugs or weird behaviour, please let me know either by [submitting an issue](https://github.com/szczm/pico8-befunge-interpreter/issues/new) or on [Twitter @szczm_](https://twitter.com/szczm_). Bonus points for including a screenshot!
