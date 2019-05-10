@@ -7,14 +7,14 @@
 This is a Befunge-93 interpreter that I made in a few days. Tested on [all examples from Rosetta Code](https://rosettacode.org/wiki/Category:Befunge) that fit. You can finally code in an esoteric language inside a fantasy console!
 
 ## Excuse me, what is Befunge?
-Befunge is a **stack-based, esoteric programming language**, in which the code is represented on a **two-dimensional grid**. The control flow of the program is directed using instructions such as *v*, *>*, *^* and *<* (respectively: down, right, up, left). If a border is reached, the program wraps around (both directions). Single character instructions can pop values of the stack, or place them on top of the stack, and act based on the retrieved values. Read more [on Wikipedia](http://wikipedia.org/wiki/Befunge).
+Befunge is a **stack-based, esoteric programming language**, in which the code is represented on a **two-dimensional grid**. The control flow of the program is directed using instructions such as `v`, `>`, `^` and `<` (respectively: down, right, up, left). If a border is reached, the program wraps around (both directions). Single character instructions can pop values of the stack, or place them on top of the stack, and act based on the retrieved values. Read more [on Wikipedia](http://wikipedia.org/wiki/Befunge).
 
 ## …what instructions?
 
 Here's [the list of all instructions explained](https://en.wikipedia.org/wiki/Befunge#Befunge-93_instruction_list), also on Wikipedia. There are not many of them, and most are self-explanatory (arrow instructions, arithmetic operators, numbers). Just like with any other language, the more fun you have with it, the more you'll learn!
 
 ## …and why should I care?
-In my opinion, Befunge really tests (and improves) your logical thinking and flow control skills. This is also a language like no other, in which you can actually visualize the control flow on a grid. Lastly, this is a stack based language, so it teaches you how to operate under a set of limitations (of course, you can just store and read values using *g* and *p* instructions, but that's cheating (not really)).
+In my opinion, Befunge really tests (and improves) your logical thinking and flow control skills. This is also a language like no other, in which you can actually visualize the control flow on a grid. Lastly, this is a stack based language, so it teaches you how to operate under a set of limitations (of course, you can just store and read values using `g` and `p` instructions, but that's cheating (not really)).
 
 Also, you don't have to care if you don't want to! Democracy!
 
@@ -26,7 +26,7 @@ Sure:
 ```
 "!dlrow olleh",,,,,,,,,,,,@
 ```
-First, *"* enables string mode; all characters until next *"* will be pushed into the stack as ASCII values. Then, the string *hello world!* is pushed onto the stack (values go bottom to top on the stack). Then *,* prints a single character, so all characters are printed. Finally, *@* ends the program.
+First, `"` enables string mode; all characters until next `"` will be pushed into the stack as ASCII values. Then, the string `hello world!` is pushed onto the stack (values go bottom to top on the stack). Then `,` prints a single character, so all characters are printed. Finally, `@` ends the program.
 
 ### Multiply n numbers together
 ```
@@ -47,9 +47,9 @@ Push 1, then prompt user for n (&, stack: 1 [n]). Swap two top values (\, stack:
             vp70.:-1<
 ```
 Sadly, I made this one myself. I'll let you figure this one out. Most important aspects of this code:
-- *07p* stores the top value in cell (0,7), *07g* retrieves it
-- *+67* is 6+7=13 == "\r", carriage return, which is a newline in PICO-8
-- a *0* is always appended after bottle count, that is to be able to discern if a character or a number should be printed
+- `07p` stores the top value in cell (0,7), `07g` retrieves it
+- `+67` is 6+7=13 == "\r", carriage return, which is a newline in PICO-8
+- a `0` is always appended after bottle count, that is to be able to discern if a character or a number should be printed
 - going past grid borders wraps around
 
 ## Features:
@@ -60,7 +60,7 @@ Sadly, I made this one myself. I'll let you figure this one out. Most important 
 - You can't copy/paste code in or out! This is a nightmare!
 - Procedural sound! Instructions make little bleeps when they are being executed, and so do your keys! Doesn't seem to work in the browser! Family fun!
 
-If you want to share your code, you can either share a screenshot, or you can copy the save file, which should be in your usual PICO-8 cart location under the name *_picofunge_save.p8*. Interwebz!
+If you want to share your code, you can either share a screenshot, or you can copy the save file, which should be in your usual PICO-8 cart location under the name `_picofunge_save.p8`. Interwebz!
 
 ## How to run:
 If you have PICO-8 installed, download the [cart file](befunge.p8.png) and run it in the same way as any other cart.
@@ -85,7 +85,7 @@ To reload code, restart the cart. There is no LOAD button, since there are only 
 
 ## Limitations/known bugs/quirks:
 - Backspace button doesn't work in the browser (tested in Firefox)
-- If the *p* instruction is used to put a nonprintable character in the grid, the character is displayed in a distinct way as a "glitch", it is considered data, and is not saved
+- If the `p` instruction is used to put a nonprintable (value outside of ASCII) character in the grid, the character is displayed in a distinct way as a "glitch", it is considered data, and is not saved
 - The P key opens up the main menu, which can be sometimes annoying, but is not otherwise a problem
 - The grid is smaller than usual Befunge (it's size is 32 columns and 8 rows)
 - There is currently no support for big numbers, numbers inside the interpreter are normal PICO-8 numbers (so usual things like integer overflow can happen)
