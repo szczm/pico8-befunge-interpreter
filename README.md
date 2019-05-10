@@ -1,4 +1,5 @@
 # PICO-8 Befunge Interpreter
+##### by [@szczm_](https://twitter.com/szczm_)
 
 ![Header GIF representing the interpreter in action](https://github.com/szczm/pico8-befunge-interpreter/blob/master/befunge.p8_0.gif)
 
